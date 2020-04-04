@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import { treatmentsRawList } from '../common/treatment-service';
+import { Cart } from "../cart/cart";
+
+const cart = new Cart();
 
 export const treatments = () => {
   const fragment = $(new DocumentFragment());
@@ -24,5 +27,8 @@ const treatmentsListItem = (treatment) => {
   let time = $("<span></span>").text(treatment.time+" min").addClass("treatmentItem");
   let price = $("<span></span>").text(treatment.price+" pln").addClass("treatmentItem");
   li.append(name).append(area).append(time).append(price);
+  li.click(()=>{
+    cart.set(treatment);
+  })
   return li;
 };

@@ -1,7 +1,8 @@
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 
+
 .treatmentRow {
-    &:nth-child(odd){
+    &:nth-child(odd) {
         background-color: lightgrey;
     }
     .treatmentItem {

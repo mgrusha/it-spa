@@ -8,3 +8,4 @@ export const roomsService = {
     return fetch(`http://localhost:3000/rooms/${id}`).then(response => response.json());
   }
 };
+ 
